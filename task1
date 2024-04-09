@@ -1,1 +1,21 @@
+def fibonacci(n):
+    fib_series = [0, 1]  # Initial values of Fibonacci sequence
+
+    if n <= 0:
+        return "Invalid input. Please provide a positive integer."
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return fib_series
+    
+    for i in range(2, n):
+        next_term = fib_series[-1] + fib_series[-2]  # Calculating next term
+        fib_series.append(next_term)
+
+    return fib_series
+
+
+num_terms = 10
+fibonacci_sequence = fibonacci(num_terms)
+print("Fibonacci sequence up to", num_terms, "terms:", fibonacci_sequence)
 
